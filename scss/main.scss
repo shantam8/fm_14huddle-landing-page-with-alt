@@ -1,10 +1,212 @@
 @import "colors";
 @import "fonts";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    //font-family: 'Poppins', sans-serif;
-    //font-family: 'Open Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+// 7:30
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0 auto;
+
+  .backgroundHelper {
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-color: $veryPaleCyan;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    header {
+      width: 25rem;
+      margin: 0 auto;
+      text-align: center;
+      .topBar {
+        padding: 1.375rem 0.875rem 0 0.875rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .topLogoSvg {
+          width: 100px;
+          img {
+            width: 100%;
+          }
+        }
+        button {
+          height: 1.5rem;
+          width: 5.6875rem;
+          background-color: white;
+          border: none;
+          border-radius: 24px;
+          box-shadow: 0px 0 20px -5px $grayishBlue;
+        }
+      }
+
+      .title {
+        padding: 5rem 2.25rem 3.25rem 2.25rem;
+        h1 {
+          padding-bottom: 2rem;
+          font-size: 1.7rem;
+        }
+        p {
+          padding-bottom: 2.5rem;
+          font-size: 1.1rem;
+        }
+        button {
+          height: 2.25rem;
+          width: 14rem;
+          border: none;
+          border-radius: 240px;
+          box-shadow: 0px 0 20px -5px $grayishBlue;
+          background-color: $pink;
+          color: white;
+          font-size: 0.8rem;
+        }
+      }
+      .image {
+        padding: 0 2.25rem 2rem 2.25rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    margin: 3.375rem auto 13.125rem auto;
+
+    width: 25rem;
+    text-align: center;
+
+    article {
+      margin-bottom: 2.25rem;
+      padding: 3.375rem 3rem 3rem 3rem;
+      border-radius: 24px;
+      box-shadow: 0px 0 20px -5px $grayishBlue;
+      img {
+        width: 100%;
+      }
+
+      h2 {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+      }
+      p {
+        margin-top: 1.3rem;
+        font-size: 1rem;
+        color: $grayishBlue;
+      }
+
+      &.ctaBlock {
+        position: absolute;
+        height: 10.375rem;
+        width: 29rem;
+        padding: 2.5rem 0rem;
+        left: -2rem;
+        bottom: -19rem;
+        background-color: white;
+        h2 {
+          font-size: 1.2rem;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+        }
+
+        button {
+          height: 2.25rem;
+          width: 14rem;
+          border: none;
+          border-radius: 240px;
+          box-shadow: 0px 0 20px -5px $grayishBlue;
+          background-color: $pink;
+          color: white;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $veryDarkCyan;
+    color: white;
+
+    .footerBackgoundHelper {
+      width: 25rem;
+      margin: 0 auto;
+      padding: 8rem 0.875rem 3rem 0.875rem;
+    }
+
+    .footerLogoSvg {
+      svg {
+        #logoLeft {
+          fill: white;
+        }
+        #logoRight {
+          fill: white;
+        }
+      }
+    }
+
+    .footerInfo {
+      margin-top: 1.625rem;
+
+      .contact {
+        margin-bottom: 3.5rem;
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5rem;
+        text-align: left;
+      }
+
+      nav {
+        ul {
+          list-style: none;
+          font-size: 1.5rem;
+          line-height: 3.2rem;
+        }
+      }
+      .socialMedia {
+        margin: 3rem auto 1.5rem auto;
+        width: 18rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .socialSvg {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          border: 1px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 50%;
+            height: 50%;
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+      .copyright {
+        text-align: center;
+      }
+    }
+  }
 }

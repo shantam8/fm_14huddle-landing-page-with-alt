@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0 auto;
+}
+
+body .backgroundHelper {
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-color: #ebfbff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .backgroundHelper header {
+  width: 25rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body .backgroundHelper header .topBar {
+  padding: 1.375rem 0.875rem 0 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .backgroundHelper header .topBar .topLogoSvg {
+  width: 100px;
+}
+
+body .backgroundHelper header .topBar .topLogoSvg img {
+  width: 100%;
+}
+
+body .backgroundHelper header .topBar button {
+  height: 1.5rem;
+  width: 5.6875rem;
+  background-color: white;
+  border: none;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 0 20px -5px #808d99;
+          box-shadow: 0px 0 20px -5px #808d99;
+}
+
+body .backgroundHelper header .title {
+  padding: 5rem 2.25rem 3.25rem 2.25rem;
+}
+
+body .backgroundHelper header .title h1 {
+  padding-bottom: 2rem;
+  font-size: 1.7rem;
+}
+
+body .backgroundHelper header .title p {
+  padding-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+body .backgroundHelper header .title button {
+  height: 2.25rem;
+  width: 14rem;
+  border: none;
+  border-radius: 240px;
+  -webkit-box-shadow: 0px 0 20px -5px #808d99;
+          box-shadow: 0px 0 20px -5px #808d99;
+  background-color: #ff52bf;
+  color: white;
+  font-size: 0.8rem;
+}
+
+body .backgroundHelper header .image {
+  padding: 0 2.25rem 2rem 2.25rem;
+}
+
+body .backgroundHelper header .image img {
+  width: 100%;
+}
+
+body main {
+  position: relative;
+  margin: 3.375rem auto 13.125rem auto;
+  width: 25rem;
+  text-align: center;
+}
+
+body main article {
+  margin-bottom: 2.25rem;
+  padding: 3.375rem 3rem 3rem 3rem;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 0 20px -5px #808d99;
+          box-shadow: 0px 0 20px -5px #808d99;
+}
+
+body main article img {
+  width: 100%;
+}
+
+body main article h2 {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+body main article p {
+  margin-top: 1.3rem;
+  font-size: 1rem;
+  color: #808d99;
+}
+
+body main article.ctaBlock {
+  position: absolute;
+  height: 10.375rem;
+  width: 29rem;
+  padding: 2.5rem 0rem;
+  left: -2rem;
+  bottom: -19rem;
+  background-color: white;
+}
+
+body main article.ctaBlock h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+body main article.ctaBlock button {
+  height: 2.25rem;
+  width: 14rem;
+  border: none;
+  border-radius: 240px;
+  -webkit-box-shadow: 0px 0 20px -5px #808d99;
+          box-shadow: 0px 0 20px -5px #808d99;
+  background-color: #ff52bf;
+  color: white;
+  font-size: 0.8rem;
+}
+
+body footer {
+  background-color: #00252e;
+  color: white;
+}
+
+body footer .footerBackgoundHelper {
+  width: 25rem;
+  margin: 0 auto;
+  padding: 8rem 0.875rem 3rem 0.875rem;
+}
+
+body footer .footerLogoSvg svg #logoLeft {
+  fill: white;
+}
+
+body footer .footerLogoSvg svg #logoRight {
+  fill: white;
+}
+
+body footer .footerInfo {
+  margin-top: 1.625rem;
+}
+
+body footer .footerInfo .contact {
+  margin-bottom: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 28px 1fr;
+      grid-template-columns: 28px 1fr;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  gap: 0.5rem;
+  text-align: left;
+}
+
+body footer .footerInfo nav ul {
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+}
+
+body footer .footerInfo .socialMedia {
+  margin: 3rem auto 1.5rem auto;
+  width: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .footerInfo .socialMedia .socialSvg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .footerInfo .socialMedia .socialSvg svg {
+  width: 50%;
+  height: 50%;
+}
+
+body footer .footerInfo .socialMedia .socialSvg svg path {
+  fill: white;
+}
+
+body footer .footerInfo .copyright {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
