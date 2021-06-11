@@ -22,6 +22,7 @@ button {
 
 body {
   margin: 0 auto;
+  transition: all 1s ease-in-out;
 
   .backgroundHelper {
     background-image: url(../images/bg-hero-mobile.svg);
@@ -30,7 +31,7 @@ body {
     background-size: cover;
 
     header {
-      width: $container-width-default;
+      @include setContainerWidth("width");
       margin: 0 auto;
       text-align: center;
 
@@ -40,8 +41,16 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        @media screen and (min-width: $screen-width-small) {
+          padding: 2rem 1rem 0 1rem;
+        }
+
         .topLogoSvg {
           width: 100px;
+
+          @media screen and (min-width: $screen-width-small) {
+            width: 120px;
+          }
 
           img {
             width: 100%;
@@ -57,33 +66,74 @@ body {
           box-shadow: 0px 0 20px -5px $grayishBlue;
           font-size: 0.6rem;
           @include hoverEffect;
+
+          @media screen and (min-width: $screen-width-small) {
+            height: 2rem;
+            width: 6rem;
+          }
         }
       }
 
-      .title {
-        padding: 5rem 2.25rem 3.25rem 2.25rem;
-
-        h1 {
-          padding-bottom: 2rem;
-          font-size: 1.7rem;
+      .headerTitleWrapper {
+        @media screen and (min-width: $screen-width-medium) {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          text-align: left;
         }
 
-        p {
-          padding-bottom: 2.5rem;
-          font-size: 1.1rem;
+        .title {
+          padding: 5rem 2.25rem 3.25rem 2.25rem;
+
+          @media screen and (min-width: $screen-width-small) {
+            padding-top: 4rem;
+          }
+
+          h1 {
+            padding-bottom: 2rem;
+            font-size: 1.7rem;
+
+            @media screen and (min-width: $screen-width-medium) {
+              font-size: 1.8rem;
+            }
+          }
+
+          p {
+            padding-bottom: 2.5rem;
+            font-size: 1.1rem;
+
+            @media screen and (min-width: $screen-width-medium) {
+            }
+            font-size: 1rem;
+          }
+
+          button {
+            @include getStartedBtn;
+            @include hoverEffect;
+
+            @media screen and (min-width: $screen-width-small) {
+              height: 2.7rem;
+              width: 17rem;
+            }
+
+            @media screen and (min-width: $screen-width-medium) {
+              height: 3rem;
+              width: 18rem;
+              font-size: 0.9rem;
+            }
+          }
         }
 
-        button {
-          @include getStartedBtn;
-          @include hoverEffect;
-        }
-      }
+        .image {
+          padding: 0 2.25rem 2rem 2.25rem;
+          @media screen and (min-width: $screen-width-medium) {
+            padding: 0;
+          }
 
-      .image {
-        padding: 0 2.25rem 2rem 2.25rem;
-
-        img {
-          width: 100%;
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -96,45 +146,119 @@ body {
     width: 21rem;
     text-align: center;
 
+    @media screen and (min-width: $screen-width-small) {
+      width: 27rem;
+    }
+
+    @media screen and (min-width: $screen-width-medium) {
+      width: 55rem;
+      margin-top: 6rem;
+    }
+
     article {
       margin-bottom: 2.25rem;
       padding: 3.375rem 3rem 3rem 3rem;
       border-radius: 24px;
       box-shadow: 0px 0 20px -5px $grayishBlue;
 
-      img {
-        width: 100%;
+      @media screen and (min-width: $screen-width-small) {
+        padding: 3.5rem 4rem 3rem 4rem;
       }
 
-      h2 {
-        margin-top: 3rem;
-        font-size: 1.2rem;
+      @media screen and (min-width: $screen-width-medium) {
+        padding: 2rem 1rem 2rem 5rem;
       }
 
-      p {
-        margin-top: 1.3rem;
-        font-size: 0.8rem;
-        color: $grayishBlue;
-      }
+      .flexWrapper {
+        @media screen and (min-width: $screen-width-medium) {
+          width: 100%;
+          padding: 0;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
 
-      &.ctaBlock {
-        position: absolute;
-        height: 10.375rem;
-        width: 22rem;
-        padding: 2.5rem 0rem;
-        left: -0.5rem;
-        bottom: -19rem;
-        background-color: white;
+          text-align: left;
+          gap: 10rem;
 
-        h2 {
-          font-size: 1.2rem;
-          margin-top: 0;
-          margin-bottom: 1.5rem;
+          &.reverse {
+            flex-direction: row;
+          }
         }
 
-        button {
-          @include getStartedBtn;
-          @include hoverEffect;
+        img {
+          width: 100%;
+        }
+
+        .articleTextWrapper {
+          h2 {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+
+            @media screen and (min-width: $screen-width-small) {
+              margin-top: 2rem;
+              font-size: 1.5rem;
+            }
+          }
+
+          p {
+            margin-top: 1.3rem;
+            font-size: 0.8rem;
+            color: $grayishBlue;
+
+            @media screen and (min-width: $screen-width-small) {
+              margin-top: 1.2rem;
+              font-size: 0.9rem;
+            }
+
+            @media screen and (min-width: $screen-width-medium) {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+
+        &.ctaBlock {
+          position: absolute;
+          height: 10.375rem;
+          width: 22rem;
+          padding: 2.5rem 0rem;
+          left: -0.5rem;
+          bottom: -19rem;
+          background-color: white;
+
+          @media screen and (min-width: $screen-width-small) {
+            width: 32rem;
+            padding: 2rem 0;
+            left: -2.5rem;
+            bottom: -19rem;
+          }
+
+          h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+
+            @media screen and (min-width: $screen-width-small) {
+              font-size: 1.4rem;
+            }
+          }
+
+          button {
+            @include getStartedBtn;
+            @include hoverEffect;
+
+            @media screen and (min-width: $screen-width-small) {
+              height: 2.7rem;
+              width: 17rem;
+            }
+
+            @media screen and (min-width: $screen-width-medium) {
+              height: 3rem;
+              width: 18rem;
+              font-size: 0.9rem;
+            }
+          }
         }
       }
     }
@@ -145,13 +269,17 @@ body {
     color: white;
 
     .footerBackgoundHelper {
-      width: $container-width-default;
+      @include setContainerWidth("width");
       margin: 0 auto;
       padding: 7rem 0.875rem 3rem 0.875rem;
     }
 
     .footerLogoSvg {
       svg {
+        @media screen and (min-width: $screen-width-small) {
+          width: 40%;
+        }
+
         #logoLeft {
           fill: white;
         }
@@ -203,6 +331,11 @@ body {
           align-items: center;
           @include hoverEffect;
 
+          @media screen and (min-width: $screen-width-small) {
+            height: 2.3rem;
+            width: 2.3rem;
+          }
+
           svg {
             width: 50%;
 
@@ -216,6 +349,10 @@ body {
       .copyright {
         text-align: center;
         font-size: 0.7rem;
+
+        @media screen and (min-width: $screen-width-small) {
+          font-size: 0.8;
+        }
       }
     }
   }

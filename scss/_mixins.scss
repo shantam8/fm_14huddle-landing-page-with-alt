@@ -21,3 +21,15 @@
   color: white;
   font-size: 0.8rem;
 }
+
+@mixin setContainerWidth($var) {
+  #{$var}: 23.4375rem;
+
+  @media screen and (min-width: $screen-width-small) {
+    #{$var}: 35rem;
+  }
+
+  @media screen and (min-width: $screen-width-medium) {
+    #{$var}: 60rem;
+  }
+}
