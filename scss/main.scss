@@ -1,5 +1,6 @@
-@import "colors";
 @import "fonts";
+@import "mixins";
+@import "variables";
 
 * {
   margin: 0;
@@ -8,7 +9,6 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
-// 7:30
 
 h1,
 h2 {
@@ -17,7 +17,6 @@ h2 {
 }
 
 button {
-  font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
 
@@ -31,22 +30,24 @@ body {
     background-size: cover;
 
     header {
-      width: 25rem;
+      width: $container-width-default;
       margin: 0 auto;
       text-align: center;
+
       .topBar {
         padding: 1.375rem 0.875rem 0 0.875rem;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .topLogoSvg {
           width: 100px;
+
           img {
             width: 100%;
           }
         }
+
         button {
           height: 1.5rem;
           width: 5.6875rem;
@@ -54,32 +55,33 @@ body {
           border: none;
           border-radius: 24px;
           box-shadow: 0px 0 20px -5px $grayishBlue;
+          font-size: 0.6rem;
+          @include hoverEffect;
         }
       }
 
       .title {
         padding: 5rem 2.25rem 3.25rem 2.25rem;
+
         h1 {
           padding-bottom: 2rem;
           font-size: 1.7rem;
         }
+
         p {
           padding-bottom: 2.5rem;
           font-size: 1.1rem;
         }
+
         button {
-          height: 2.25rem;
-          width: 14rem;
-          border: none;
-          border-radius: 240px;
-          box-shadow: 0px 0 20px -5px $grayishBlue;
-          background-color: $pink;
-          color: white;
-          font-size: 0.8rem;
+          @include getStartedBtn;
+          @include hoverEffect;
         }
       }
+
       .image {
         padding: 0 2.25rem 2rem 2.25rem;
+
         img {
           width: 100%;
         }
@@ -91,7 +93,7 @@ body {
     position: relative;
     margin: 3.375rem auto 13.125rem auto;
 
-    width: 25rem;
+    width: 21rem;
     text-align: center;
 
     article {
@@ -99,28 +101,31 @@ body {
       padding: 3.375rem 3rem 3rem 3rem;
       border-radius: 24px;
       box-shadow: 0px 0 20px -5px $grayishBlue;
+
       img {
         width: 100%;
       }
 
       h2 {
         margin-top: 3rem;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
       }
+
       p {
         margin-top: 1.3rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: $grayishBlue;
       }
 
       &.ctaBlock {
         position: absolute;
         height: 10.375rem;
-        width: 29rem;
+        width: 22rem;
         padding: 2.5rem 0rem;
-        left: -2rem;
+        left: -0.5rem;
         bottom: -19rem;
         background-color: white;
+
         h2 {
           font-size: 1.2rem;
           margin-top: 0;
@@ -128,26 +133,21 @@ body {
         }
 
         button {
-          height: 2.25rem;
-          width: 14rem;
-          border: none;
-          border-radius: 240px;
-          box-shadow: 0px 0 20px -5px $grayishBlue;
-          background-color: $pink;
-          color: white;
-          font-size: 0.8rem;
+          @include getStartedBtn;
+          @include hoverEffect;
         }
       }
     }
   }
+
   footer {
     background-color: $veryDarkCyan;
     color: white;
 
     .footerBackgoundHelper {
-      width: 25rem;
+      width: $container-width-default;
       margin: 0 auto;
-      padding: 8rem 0.875rem 3rem 0.875rem;
+      padding: 7rem 0.875rem 3rem 0.875rem;
     }
 
     .footerLogoSvg {
@@ -155,6 +155,7 @@ body {
         #logoLeft {
           fill: white;
         }
+
         #logoRight {
           fill: white;
         }
@@ -165,7 +166,7 @@ body {
       margin-top: 1.625rem;
 
       .contact {
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
         display: grid;
         grid-template-columns: 28px 1fr;
         grid-template-rows: repeat(3, auto);
@@ -176,36 +177,45 @@ body {
       nav {
         ul {
           list-style: none;
-          font-size: 1.5rem;
-          line-height: 3.2rem;
+          font-size: 1.2rem;
+          line-height: 2.5rem;
+
+          li {
+            @include hoverEffect;
+          }
         }
       }
+
       .socialMedia {
         margin: 3rem auto 1.5rem auto;
-        width: 18rem;
+        width: 10rem;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 
         .socialSvg {
-          width: 3rem;
-          height: 3rem;
+          width: 2rem;
+          height: 2rem;
           border-radius: 50%;
           border: 1px solid white;
           display: flex;
           justify-content: center;
           align-items: center;
+          @include hoverEffect;
+
           svg {
             width: 50%;
-            height: 50%;
+
             path {
               fill: white;
             }
           }
         }
       }
+
       .copyright {
         text-align: center;
+        font-size: 0.7rem;
       }
     }
   }
