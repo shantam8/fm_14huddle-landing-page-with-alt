@@ -32,4 +32,8 @@
   @media screen and (min-width: $screen-width-medium) {
     #{$var}: 60rem;
   }
+
+  @media screen and (min-width: $screen-width-large) {
+    #{$var}: 83rem;
+  }
 }

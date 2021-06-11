@@ -55,6 +55,10 @@ body {
             width: 120px;
           }
 
+          @media screen and (min-width: $screen-width-large) {
+            width: 160px;
+          }
+
           img {
             width: 100%;
           }
@@ -80,6 +84,11 @@ body {
             width: 9rem;
             font-size: 0.8rem;
           }
+
+          @media screen and (min-width: $screen-width-medium) {
+            height: 3rem;
+            width: 11rem;
+          }
         }
       }
 
@@ -92,11 +101,20 @@ body {
           text-align: left;
         }
 
+        @media screen and (min-width: $screen-width-large) {
+          gap: 3rem;
+          padding: 3rem 0;
+        }
+
         .title {
           padding: 5rem 2.25rem 3.25rem 2.25rem;
 
           @media screen and (min-width: $screen-width-small) {
             padding-top: 4rem;
+          }
+
+          @media screen and (min-width: $screen-width-large) {
+            flex-basis: 40%;
           }
 
           h1 {
@@ -105,6 +123,11 @@ body {
 
             @media screen and (min-width: $screen-width-medium) {
               font-size: 1.8rem;
+            }
+
+            @media screen and (min-width: $screen-width-large) {
+              padding-bottom: 1rem;
+              font-size: 2.5rem;
             }
           }
 
@@ -140,6 +163,10 @@ body {
             padding: 0;
           }
 
+          @media screen and (min-width: $screen-width-large) {
+            flex-basis: 60%;
+          }
+
           img {
             width: 100%;
           }
@@ -164,6 +191,11 @@ body {
       margin-top: 6rem;
     }
 
+    @media screen and (min-width: $screen-width-large) {
+      width: 80rem;
+      margin-bottom: 17rem;
+    }
+
     article {
       margin-bottom: 2.25rem;
       padding: 3.375rem 3rem 3rem 3rem;
@@ -178,6 +210,10 @@ body {
         padding: 2rem 1rem 2rem 5rem;
       }
 
+      @media screen and (min-width: $screen-width-large) {
+        margin-bottom: 4rem;
+      }
+
       .flexWrapper {
         @media screen and (min-width: $screen-width-medium) {
           width: 100%;
@@ -187,20 +223,22 @@ body {
           flex-direction: row-reverse;
           justify-content: space-between;
           align-items: center;
-
-          text-align: left;
           gap: 10rem;
+          text-align: left;
 
           &.reverse {
             flex-direction: row;
           }
         }
-
-        img {
-          width: 100%;
+        .imgWrapper {
+          flex-basis: 50%;
+          img {
+            width: 100%;
+          }
         }
 
         .articleTextWrapper {
+          flex-basis: 50%;
           h2 {
             margin-top: 3rem;
             font-size: 1.2rem;
@@ -252,6 +290,11 @@ body {
           bottom: -19rem;
         }
 
+        @media screen and (min-width: $screen-width-large) {
+          left: 22rem;
+          bottom: -25rem;
+        }
+
         h2 {
           font-size: 1.2rem;
           margin-top: 0;
@@ -264,6 +307,7 @@ body {
             font-size: 1.6rem;
           }
         }
+
         button {
           @include getStartedBtn;
           @include hoverEffect;
@@ -295,13 +339,7 @@ body {
 
     .footerLogoSvg {
       svg {
-        @media screen and (min-width: $screen-width-small) {
-          width: 40%;
-        }
-
-        @media screen and (min-width: $screen-width-medium) {
-          width: 20%;
-        }
+        width: 150px;
 
         #logoLeft {
           fill: white;
@@ -322,7 +360,13 @@ body {
         grid-template-rows: 1fr;
         grid-template-areas: "contact contact nav1 nav2 socialMedia";
         align-items: start;
-        gap:5rem;
+        gap: 5rem;
+      }
+
+      @media screen and (min-width: $screen-width-large) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "contact nav1 nav2 socialMedia";
+        gap: 7rem;
       }
 
       .contact {
@@ -343,7 +387,7 @@ body {
       nav {
         ul {
           list-style: none;
-          font-size: 1.2rem;
+          font-size: 1rem;
           line-height: 2.5rem;
 
           @media screen and (min-width: $screen-width-medium) {
@@ -395,8 +439,6 @@ body {
             height: 2.3rem;
             width: 2.3rem;
           }
-
-          
 
           svg {
             width: 50%;
