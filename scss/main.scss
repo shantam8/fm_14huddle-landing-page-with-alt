@@ -44,6 +44,9 @@ body {
         @media screen and (min-width: $screen-width-small) {
           padding: 2rem 1rem 0 1rem;
         }
+        @media screen and (min-width: $screen-width-medium) {
+          padding: 2rem 0 0 0;
+        }
 
         .topLogoSvg {
           width: 100px;
@@ -70,6 +73,12 @@ body {
           @media screen and (min-width: $screen-width-small) {
             height: 2rem;
             width: 6rem;
+          }
+
+          @media screen and (min-width: $screen-width-medium) {
+            height: 2.5rem;
+            width: 9rem;
+            font-size: 0.8rem;
           }
         }
       }
@@ -217,47 +226,57 @@ body {
             }
           }
         }
+      }
 
-        &.ctaBlock {
-          position: absolute;
-          height: 10.375rem;
-          width: 22rem;
-          padding: 2.5rem 0rem;
-          left: -0.5rem;
+      &.ctaBlock {
+        position: absolute;
+        height: 10.375rem;
+        width: 22rem;
+        padding: 2.5rem 0rem;
+        left: -0.5rem;
+        bottom: -19rem;
+        background-color: white;
+
+        @media screen and (min-width: $screen-width-small) {
+          width: 32rem;
+          padding: 2rem 0;
+          left: -2.5rem;
           bottom: -19rem;
-          background-color: white;
+        }
+
+        @media screen and (min-width: $screen-width-medium) {
+          height: 12rem;
+          width: 36rem;
+          padding: 2.2rem 0;
+          left: 9.5rem;
+          bottom: -19rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
 
           @media screen and (min-width: $screen-width-small) {
-            width: 32rem;
-            padding: 2rem 0;
-            left: -2.5rem;
-            bottom: -19rem;
+            font-size: 1.4rem;
+          }
+          @media screen and (min-width: $screen-width-medium) {
+            font-size: 1.6rem;
+          }
+        }
+        button {
+          @include getStartedBtn;
+          @include hoverEffect;
+
+          @media screen and (min-width: $screen-width-small) {
+            height: 2.7rem;
+            width: 17rem;
           }
 
-          h2 {
-            font-size: 1.2rem;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-
-            @media screen and (min-width: $screen-width-small) {
-              font-size: 1.4rem;
-            }
-          }
-
-          button {
-            @include getStartedBtn;
-            @include hoverEffect;
-
-            @media screen and (min-width: $screen-width-small) {
-              height: 2.7rem;
-              width: 17rem;
-            }
-
-            @media screen and (min-width: $screen-width-medium) {
-              height: 3rem;
-              width: 18rem;
-              font-size: 0.9rem;
-            }
+          @media screen and (min-width: $screen-width-medium) {
+            height: 3.5rem;
+            width: 18rem;
+            font-size: 0.9rem;
           }
         }
       }
@@ -280,6 +299,10 @@ body {
           width: 40%;
         }
 
+        @media screen and (min-width: $screen-width-medium) {
+          width: 20%;
+        }
+
         #logoLeft {
           fill: white;
         }
@@ -293,13 +316,28 @@ body {
     .footerInfo {
       margin-top: 1.625rem;
 
+      @media screen and (min-width: $screen-width-medium) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "contact contact nav1 nav2 socialMedia";
+        align-items: start;
+        gap:5rem;
+      }
+
       .contact {
+        grid-area: contact;
         margin-bottom: 3rem;
         display: grid;
         grid-template-columns: 28px 1fr;
         grid-template-rows: repeat(3, auto);
         gap: 0.5rem;
         text-align: left;
+
+        @media screen and (min-width: $screen-width-medium) {
+          margin-bottom: 0rem;
+          font-size: 0.7rem;
+        }
       }
 
       nav {
@@ -308,18 +346,40 @@ body {
           font-size: 1.2rem;
           line-height: 2.5rem;
 
+          @media screen and (min-width: $screen-width-medium) {
+            font-size: 0.9rem;
+            line-height: 1;
+          }
+
           li {
             @include hoverEffect;
+            @media screen and (min-width: $screen-width-medium) {
+              margin-bottom: 1rem;
+            }
           }
         }
       }
 
+      .navbarOne {
+        grid-area: nav1;
+      }
+
+      .navbarTwo {
+        grid-area: nav2;
+      }
+
       .socialMedia {
+        grid-area: socialMedia;
         margin: 3rem auto 1.5rem auto;
         width: 10rem;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @media screen and (min-width: $screen-width-medium) {
+          margin: 0;
+          justify-content: space-between;
+        }
 
         .socialSvg {
           width: 2rem;
@@ -336,6 +396,8 @@ body {
             width: 2.3rem;
           }
 
+          
+
           svg {
             width: 50%;
 
@@ -345,14 +407,17 @@ body {
           }
         }
       }
+    }
+    .copyright {
+      text-align: center;
+      font-size: 0.7rem;
 
-      .copyright {
-        text-align: center;
-        font-size: 0.7rem;
+      @media screen and (min-width: $screen-width-small) {
+        font-size: 0.8;
+      }
 
-        @media screen and (min-width: $screen-width-small) {
-          font-size: 0.8;
-        }
+      @media screen and (min-width: $screen-width-medium) {
+        text-align: end;
       }
     }
   }

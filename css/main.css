@@ -69,6 +69,12 @@ body .backgroundHelper header .topBar {
   }
 }
 
+@media screen and (min-width: 64rem) {
+  body .backgroundHelper header .topBar {
+    padding: 2rem 0 0 0;
+  }
+}
+
 body .backgroundHelper header .topBar .topLogoSvg {
   width: 100px;
 }
@@ -111,6 +117,14 @@ body .backgroundHelper header .topBar button:active {
   body .backgroundHelper header .topBar button {
     height: 2rem;
     width: 6rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body .backgroundHelper header .topBar button {
+    height: 2.5rem;
+    width: 9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -318,7 +332,7 @@ body main article .flexWrapper .articleTextWrapper p {
   }
 }
 
-body main article .flexWrapper.ctaBlock {
+body main article.ctaBlock {
   position: absolute;
   height: 10.375rem;
   width: 22rem;
@@ -329,7 +343,7 @@ body main article .flexWrapper.ctaBlock {
 }
 
 @media screen and (min-width: 40rem) {
-  body main article .flexWrapper.ctaBlock {
+  body main article.ctaBlock {
     width: 32rem;
     padding: 2rem 0;
     left: -2.5rem;
@@ -337,19 +351,35 @@ body main article .flexWrapper.ctaBlock {
   }
 }
 
-body main article .flexWrapper.ctaBlock h2 {
+@media screen and (min-width: 64rem) {
+  body main article.ctaBlock {
+    height: 12rem;
+    width: 36rem;
+    padding: 2.2rem 0;
+    left: 9.5rem;
+    bottom: -19rem;
+  }
+}
+
+body main article.ctaBlock h2 {
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 40rem) {
-  body main article .flexWrapper.ctaBlock h2 {
+  body main article.ctaBlock h2 {
     font-size: 1.4rem;
   }
 }
 
-body main article .flexWrapper.ctaBlock button {
+@media screen and (min-width: 64rem) {
+  body main article.ctaBlock h2 {
+    font-size: 1.6rem;
+  }
+}
+
+body main article.ctaBlock button {
   height: 2.25rem;
   width: 14rem;
   border: none;
@@ -363,27 +393,27 @@ body main article .flexWrapper.ctaBlock button {
   transition: background-color 0.5s;
 }
 
-body main article .flexWrapper.ctaBlock button:hover {
+body main article.ctaBlock button:hover {
   cursor: pointer;
   background-color: #47a7f5;
 }
 
-body main article .flexWrapper.ctaBlock button:active {
+body main article.ctaBlock button:active {
   background-color: lightgreen;
   -webkit-transition: background-color 0s;
   transition: background-color 0s;
 }
 
 @media screen and (min-width: 40rem) {
-  body main article .flexWrapper.ctaBlock button {
+  body main article.ctaBlock button {
     height: 2.7rem;
     width: 17rem;
   }
 }
 
 @media screen and (min-width: 64rem) {
-  body main article .flexWrapper.ctaBlock button {
-    height: 3rem;
+  body main article.ctaBlock button {
+    height: 3.5rem;
     width: 18rem;
     font-size: 0.9rem;
   }
@@ -418,6 +448,12 @@ body footer .footerBackgoundHelper {
   }
 }
 
+@media screen and (min-width: 64rem) {
+  body footer .footerLogoSvg svg {
+    width: 20%;
+  }
+}
+
 body footer .footerLogoSvg svg #logoLeft {
   fill: white;
 }
@@ -430,7 +466,24 @@ body footer .footerInfo {
   margin-top: 1.625rem;
 }
 
+@media screen and (min-width: 64rem) {
+  body footer .footerInfo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "contact contact nav1 nav2 socialMedia";
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 5rem;
+  }
+}
+
 body footer .footerInfo .contact {
+  grid-area: contact;
   margin-bottom: 3rem;
   display: -ms-grid;
   display: grid;
@@ -442,10 +495,24 @@ body footer .footerInfo .contact {
   text-align: left;
 }
 
+@media screen and (min-width: 64rem) {
+  body footer .footerInfo .contact {
+    margin-bottom: 0rem;
+    font-size: 0.7rem;
+  }
+}
+
 body footer .footerInfo nav ul {
   list-style: none;
   font-size: 1.2rem;
   line-height: 2.5rem;
+}
+
+@media screen and (min-width: 64rem) {
+  body footer .footerInfo nav ul {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
 }
 
 body footer .footerInfo nav ul li {
@@ -464,7 +531,22 @@ body footer .footerInfo nav ul li:active {
   transition: background-color 0s;
 }
 
+@media screen and (min-width: 64rem) {
+  body footer .footerInfo nav ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+body footer .footerInfo .navbarOne {
+  grid-area: nav1;
+}
+
+body footer .footerInfo .navbarTwo {
+  grid-area: nav2;
+}
+
 body footer .footerInfo .socialMedia {
+  grid-area: socialMedia;
   margin: 3rem auto 1.5rem auto;
   width: 10rem;
   display: -webkit-box;
@@ -476,6 +558,15 @@ body footer .footerInfo .socialMedia {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 64rem) {
+  body footer .footerInfo .socialMedia {
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 body footer .footerInfo .socialMedia .socialSvg {
@@ -522,14 +613,20 @@ body footer .footerInfo .socialMedia .socialSvg svg path {
   fill: white;
 }
 
-body footer .footerInfo .copyright {
+body footer .copyright {
   text-align: center;
   font-size: 0.7rem;
 }
 
 @media screen and (min-width: 40rem) {
-  body footer .footerInfo .copyright {
+  body footer .copyright {
     font-size: 0.8;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body footer .copyright {
+    text-align: end;
   }
 }
 /*# sourceMappingURL=main.css.map */
